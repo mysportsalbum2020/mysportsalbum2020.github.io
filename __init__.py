@@ -10,6 +10,11 @@ client = pymongo.MongoClient(connection_url)
 Database = client.get_database('Backend')
 # Table
 backend = Database.backend
+
+@app.route('/', methods=['GET'])
+def initial():
+
+    return "What's up bitches...??!!!"
   
 # To insert a single document into the database,
 # insert_one() function is used
